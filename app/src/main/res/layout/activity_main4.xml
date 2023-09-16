@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16sp"
+    tools:context=".MainActivity4">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32sp"
+        android:background="@color/white"
+        android:text="Temperature Converter"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/valueEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70sp"
+        android:inputType="numberDecimal"
+        android:hint="Enter value"
+        android:layout_alignParentTop="true"/>
+
+    <RadioGroup
+        android:id="@+id/unitRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/valueEditText"
+        android:layout_marginTop="16dp">
+
+        <RadioButton
+            android:id="@+id/celTofar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Celcius to Farenheit"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/farTocel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Farenheit to Celcius "/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/convertButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Convert"
+        android:layout_below="@id/unitRadioGroup"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="30sp"
+        android:layout_below="@id/convertButton"
+        android:layout_marginTop="16dp"/>
+
+</RelativeLayout>

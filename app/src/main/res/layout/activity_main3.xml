@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16sp"
+    tools:context=".MainActivity3">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32sp"
+        android:background="@color/white"
+        android:text="Weight Converter"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/valueEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70sp"
+        android:inputType="numberDecimal"
+        android:hint="Enter value"
+        android:layout_alignParentTop="true"/>
+
+    <RadioGroup
+        android:id="@+id/unitRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/valueEditText"
+        android:layout_marginTop="16dp">
+
+        <RadioButton
+            android:id="@+id/gToKg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gram to Kilogram"/>
+
+        <RadioButton
+            android:id="@+id/kgToG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kilogram to Gram"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/convertButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Convert"
+        android:layout_below="@id/unitRadioGroup"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="30sp"
+        android:layout_marginLeft="150sp"
+        android:layout_below="@id/convertButton"
+        android:layout_marginTop="16dp"/>
+
+</RelativeLayout>
